@@ -35,9 +35,21 @@
 
 ### 3. 팀 소개
 
-팀을 소개하세요.
-
-팀원정보 및 담당이나 사진 및 SNS를 이용하여 소개하세요.
+```markdown
+이름    : 변근호
+학번    : 20142681
+E-mail  : bkh5922a@gmail.com
+```
+```markdown
+이름    : 오상기
+학번    : 20142725
+E-mail  : osk7237@gmail.com
+```
+```markdown
+이름    : 정민선
+학번    : 20170126
+E-mail  : jms0214@kookmin.ac.kr
+```
 
 ### 4. 사용법
 
