@@ -32,7 +32,7 @@
 ### 2. 소개 영상
 
 Faorfit 페이버핏
-https://www.youtube.com/watch?v=jv924Uk81JQ
+[![Video Label]](https://www.youtube.com/watch?v=jv924Uk81JQ)
 
 ### 3. 팀 소개
 
