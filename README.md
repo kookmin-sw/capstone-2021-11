@@ -1,33 +1,12 @@
 [![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=382668&assignment_repo_type=GroupAssignmentRepo)
-# Welcome to GitHub
-
-캡스톤 팀 생성을 축하합니다.
-
-## 팀소개 및 페이지를 꾸며주세요.
-
-- 프로젝트 소개
-  - 프로젝트 설치방법 및 데모, 사용방법, 프리뷰등을 readme.md에 작성.
-  - Api나 사용방법등 내용이 많을경우 wiki에 꾸미고 링크 추가.
-
-- 팀페이지 꾸미기
-  - 프로젝트 소개 및 팀원 소개
-  - index.md 예시보고 수정.
-
-- GitHub Pages 리파지토리 Settings > Options > GitHub Pages 
-  - Source를 marster branch
-  - Theme Chooser에서 태마선택
-  - 수정후 팀페이지 확인하여 점검.
-
-**팀페이지 주소** -> https://kookmin-sw.github.io/ '{{자신의 리파지토리 아이디}}'
-
+# 페이버핏
 2021년 11조  https://kookmin-sw.github.io/capstone-2021-11/
 
+## 1. 프로잭트 소개
 
-## 내용에 아래와 같은 내용들을 추가하세요.
-
-### 1. 프로잭트 소개
-
-프로젝트
+### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
+- 원하는 장르를 선택하면 사진 작가를 추천
+- 원하는 느낌의 사진을 올리면, 비슷한 느낌의 사진과 그런 사진을 찍을 수 있는 작가를 추천
 
 ### 2. 소개 영상
 
@@ -54,37 +33,52 @@ E-mail  : jms0214@kookmin.ac.kr
 
 ### 4. 사용법
 
-소스코드제출시 설치법이나 사용법을 작성하세요.
+-
 
 ### 5. 기타
 
-추가적인 내용은 자유롭게 작성하세요.
-
-
-## Markdown을 사용하여 내용꾸미기
-
-Markdown은 작문을 스타일링하기위한 가볍고 사용하기 쉬운 구문입니다. 여기에는 다음을위한 규칙이 포함됩니다.
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Scop - Favorfit
 ```
-
-자세한 내용은 [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Support or Contact
-
-readme 파일 생성에 추가적인 도움이 필요하면 [도움말](https://help.github.com/articles/about-readmes/) 이나 [contact support](https://github.com/contact) 을 이용하세요.
+2019.04–2019.06
+국민대 실전창업교육 1기: 1,2차 교육 이수
+2019.06-2019.12
+국민대학교 창업지원단 서포터즈 4기 
+2019.07
+2019 국민대 창업지원단 글로벌 챌린지 교육 이수 
+2019.07
+2019 국민대학교 예비창업 페키지 일반 2차 진행
+2019.08
+2019 국민대학교 제주 스타트업 아카데미 우수상
+2019.09
+2019 국민대학교 스타트업 아이디어 해커톤 최우수상
+2019.10
+2019 울산 창조 경제센터 경주 IP 창업캠프 이수 
+2019.11
+2019 국민대학교 Teamplayer 창업캠프 장려상
+2019.11
+2019 중기부 예비창업패키지 심화교육 이수 
+2019.11
+2019 국민대학교 K-SEED 투자 프로그램 이수 
+2019.12
+2019 국민대학교 ICT 기술창업 트랜드 수료
+2020.01
+2020 NIPA 정보통신 산업진흥원 AI 컴퓨팅 자원 지원 
+2020.03
+2020 국민대학교 알파프로잭트 진행 (2020 1,2 학기)
+2020.03 
+국민대학교 창업보육센터 입주 
+2020.06
+기술보증기금 기술평가 1억원 보증 유치
+2020.08
+2020 도전 K-Startup 학생창업유망팀 300 선정
+2020.08 – 2021.02
+2020 중소벤처기업부 글로벌청년창업사관학교 1기 
+2020.11
+글로벌청년창업사관학교 중간평가 양호
+2020.12
+2020 산학협력 EXPO 국민대학교 관련 선정  
+2021.01
+EO GSEA 글로벌 청년창업경진대회 한국 본선 진출
+2021.02 
+2021 NIPA 정보통신 산업진흥원 AI 컴퓨팅 자원 지원 
+```
