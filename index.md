@@ -4,13 +4,15 @@
 ## 1. 프로잭트 소개
 
 #### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
+![Favorfit_img_2](imgs/favorfit_1.png)
+![Favorfit_img_1](imgs/favorfit_2.png)
 - 원하는 장르를 선택하면 사진 작가를 추천
-- 원하는 느낌의 사진을 올리면, 비슷한 느낌의 사진과 그런 사진을 찍을 수 있는 작가를 추천
+- 원하는 느낌의 사진을 올리면, 비슷한 느낌의 사진과 그런 사진을 촬영할 수 있는 작가를 추천
 
 ## 2. 소개 영상
 
 Faorfit 페이버핏
-[![Faorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
+[![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
 
 ## 3. 팀 소개
 
