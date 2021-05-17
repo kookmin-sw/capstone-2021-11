@@ -1,0 +1,14 @@
+.center .slick-center { 
+    transform: scale(1.5);
+    opacity: 1 !important;
+    z-index: 10;
+    position: relative;
+  }
+  
+/* .center {
+    margin: 5em 5em 0em 5em;
+} */
+
+.center .slick-slide{
+  opacity: .6;
+}
