@@ -1,0 +1,15 @@
+cython
+numpy==1.17.4
+torch==1.4.0
+torchvision==0.5.0
+opencv-python==4.1.1.26
+matplotlib==3.0.0
+pandas==0.24.2
+tqdm
+imgaug
+ninja
+yacs
+xlrd
+scipy
+sklearn
+pyinstaller
