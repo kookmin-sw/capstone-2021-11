@@ -4,13 +4,15 @@ import os
 import firebase_admin
 import numpy as np
 import torch.nn.parallel
+import torch.nn.parallel
+import torch.optim
 import torch.optim
 from PIL import Image
 from firebase_admin import credentials, storage
+from scipy import spatial
 from tqdm import tqdm
 
 from classifier.resnet import resnet
-
 
 class Firebase:
     def __init__(self):
@@ -40,6 +42,7 @@ def load_model(args):
 
     # load checkpoint file
     if os.path.isfile(args.model_path):
+        print("=> loading checkpoint '{}'".format(args.model_path))
         checkpoint = torch.load(args.model_path)
         state_dict = checkpoint['state_dict']
         model.load_state_dict(state_dict)
@@ -50,8 +53,40 @@ def load_model(args):
     return model
 
 
+def read_csv_data(args):
+    if os.path.isfile(args.csv_path):
+        csv_data = {}
+        with open(args.csv_path, 'r') as fp:
+            for line in fp.readlines():
+                line_split = line.replace('\n', '').split(',')
+                csv_data[line_split[0]] = np.array([float(x) for x in line_split[1:]])
+        print("=> Loaded csv data '{}'".format(args.csv_path))
+    else:
+        raise ValueError('Invalid csv path: {}'.format(args.csv_path))
+
+    return csv_data
+
+
+def get_input_data(args):
+    samples = []
+    if os.path.isfile(args.data):
+        samples.append(args.data)
+    elif os.path.isdir(args.data):
+        for path, dir, files in os.walk(args.data):
+            for filename in files:
+                if os.path.splitext(filename)[-1].lower() in ('.png', '.jpg', '.jpeg'):
+                    samples.append(os.path.join(path, filename))
+    else:
+        raise ValueError('Invalid data path: {}'.format(args.data))
+
+    print("=> Loaded {} image(s)".format(len(samples)))
+
+    return samples
+
+
 def read_image(img_path, input_size=224):
     # 1) read image
+    # ori_img = cv2.imread(img_path, cv2.IMREAD_IGNORE_ORIENTATION | cv2.IMREAD_COLOR)
     ori_img = Image.open(img_path)
 
     # 1) Resize and padding
@@ -85,41 +120,55 @@ def read_image(img_path, input_size=224):
     return input_image
 
 
-def extract_features(args):
+def extract_similar_images(args):
     firebase = Firebase()
+
     model = load_model(args)
     model = model.cuda() if torch.cuda.is_available() else model
     model.eval()
 
-    wf = open(args.csv_path, 'w')
+    csv_data = read_csv_data(args)
+    samples = get_input_data(args)
     with torch.no_grad():
-        for i, blob_key in tqdm(enumerate(sorted(firebase.blob_dict.keys())), total=len(firebase.blob_dict)):
-            try:
-                blob = firebase.blob_dict[blob_key]
-                blob.download_to_filename('./fb_extract_temp.jpg')
-                image = read_image('./fb_extract_temp.jpg')
-                image = image.cuda(non_blocking=True) if torch.cuda.is_available() else image
+        for image_path in tqdm(samples):
+            similar_images = []
 
-                _, features = model(image)
+            image = read_image(image_path)
+            image = image.cuda(non_blocking=True) if torch.cuda.is_available() else image
 
-                wf.write('{},{}\n'.format(blob.id, ','.join([str(x) for x in features[0].cpu().data.numpy()])))
-            except:
-                print('Error [{}] {}'.format(i, blob))
-                continue
+            output, feature = model(image)
+            feature = feature[0].cpu().data.numpy()
 
-    os.remove('./fb_extract_temp.jpg')
-    wf.close()
+            distances = []
+            for compare_file_path, compare_feature in csv_data.items():
+                distance = spatial.distance.cosine(feature, compare_feature)
+                distances.append([compare_file_path, distance])
+
+            for line in sorted(distances, key=lambda x: x[1])[:args.extract_num]:
+                similar_images.append(line[0])
+
+            filename = os.path.basename(image_path)
+            output_dir = os.path.join(args.result, filename.replace(os.path.splitext(filename)[-1].lower(), ''))
+            os.makedirs(output_dir, exist_ok=True)
+
+            for similar_image_path in similar_images:
+                firebase.download_image(similar_image_path, output_dir)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Extract Features')
+    parser = argparse.ArgumentParser(description='Extract Similar Images')
+    parser.add_argument('--data', default='/home/ubuntu/data/bai/test', type=str, help='path or dir to input data')
     parser.add_argument('--num_classes', default=12, type=int, metavar='N', help='number of classes')
     parser.add_argument('--model_path', default='results/model_best.pth', type=str, metavar='PATH', help='path to model')
     parser.add_argument('--csv_path', default='results/features_firebase.csv', type=str, metavar='PATH', help='path to features csv')
+    parser.add_argument('--result', default='results/similar_firebase', type=str, metavar='DIR', help='path to results')
+    parser.add_argument('--extract_num', default=10, type=int, help='num of extract images per one input image')
     args = parser.parse_args()
 
+    args.data = os.path.expanduser(args.data)
     args.model_path = os.path.expanduser(args.model_path)
     args.csv_path = os.path.expanduser(args.csv_path)
-    os.makedirs(args.csv_path.replace(os.path.basename(args.csv_path), ''), exist_ok=True)
+    args.result = os.path.expanduser(args.result)
+    os.makedirs(args.result, exist_ok=True)
 
-    extract_features(args)
+    extract_similar_images(args)
