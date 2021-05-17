@@ -9,7 +9,8 @@ from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog, QMessageBox, QLineEdit, QPushButton, QLabel, QListWidget
 from scipy import spatial
 
-VERSION = '0.0.2'
+VERSION = '0.0.1'
+print(VERSION)
 
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
@@ -83,7 +84,7 @@ class ResNet(nn.Module):
 
         self.groups = groups
         self.base_width = width_per_group
-        self.conv1 = nn.Conv2d(3, self.inplanes, kernel_size=7, stride=2, padding=3, bias=False)
+        self.conv1 = nn.Conv2d(5, self.inplanes, kernel_size=7, stride=2, padding=3, bias=False)
         self.bn1 = norm_layer(self.inplanes)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
@@ -92,7 +93,9 @@ class ResNet(nn.Module):
         self.layer3 = self._make_layer(block, 256, layers[2], stride=2, dilate=replace_stride_with_dilation[1])
         self.layer4 = self._make_layer(block, 512, layers[3], stride=2, dilate=replace_stride_with_dilation[2])
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
+        self.sigmoid = torch.sigmoid
 
+        # self.fc = nn.Linear(512 * block.expansion, num_classes)
         self.fc1 = nn.Linear(512 * block.expansion, 64)
         self.fc2 = nn.Linear(64, num_classes)
 
@@ -122,22 +125,20 @@ class ResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        x = self.conv1(x)
+        x = self.conv1(x[:, :5, :, :])
         x = self.bn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
-
         x = self.layer1(x)
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
-
         x = self.avgpool(x)
         x = x.reshape(x.size(0), -1)
+        x = self.fc1(x)
+        features = self.sigmoid(x)
+        x = self.fc2(features)
 
-        features = self.fc1(x)
-        x = self.relu(features)
-        x = self.fc2(x)
         return x, features
 
 
@@ -195,12 +196,12 @@ class ExtractorDialog(QDialog, UIDialog):
     def __init__(self):
         QDialog.__init__(self)
         self.setupUi(self)
-        self.setWindowTitle("Scop BAI Images Test Program (Version: {})".format(VERSION))
+        self.setWindowTitle("Scop BAI Profile - Images Test Program (Version: {})".format(VERSION))
 
         self.LoadingMsgBox.show()
 
-        self.model_path = 'data/model_best.pth'
-        self.csv_path = 'data/features.csv'
+        self.model_path = 'results/model_best.pth'
+        self.csv_path = 'results/features.csv'
 
         self.model = self.load_model(self.model_path)
         self.csv_data = self.read_csv_data(self.csv_path)

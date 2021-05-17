@@ -114,8 +114,10 @@ def extract_features(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Extract Features')
     parser.add_argument('--num_classes', default=12, type=int, metavar='N', help='number of classes')
-    parser.add_argument('--model_path', default='results/model_best.pth', type=str, metavar='PATH', help='path to model')
-    parser.add_argument('--csv_path', default='results/features_firebase.csv', type=str, metavar='PATH', help='path to features csv')
+    parser.add_argument('--model_path', default='results/model_best.pth', type=str, metavar='PATH',
+                        help='path to model')
+    parser.add_argument('--csv_path', default='results/features_firebase.csv', type=str, metavar='PATH',
+                        help='path to features csv')
     args = parser.parse_args()
 
     args.model_path = os.path.expanduser(args.model_path)

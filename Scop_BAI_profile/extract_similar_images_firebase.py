@@ -14,6 +14,7 @@ from tqdm import tqdm
 
 from classifier.resnet import resnet
 
+
 class Firebase:
     def __init__(self):
         if not firebase_admin._apps:
@@ -159,8 +160,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Extract Similar Images')
     parser.add_argument('--data', default='/home/ubuntu/data/bai/test', type=str, help='path or dir to input data')
     parser.add_argument('--num_classes', default=12, type=int, metavar='N', help='number of classes')
-    parser.add_argument('--model_path', default='results/model_best.pth', type=str, metavar='PATH', help='path to model')
-    parser.add_argument('--csv_path', default='results/features_firebase.csv', type=str, metavar='PATH', help='path to features csv')
+    parser.add_argument('--model_path', default='results/model_best.pth', type=str, metavar='PATH',
+                        help='path to model')
+    parser.add_argument('--csv_path', default='results/features_firebase.csv', type=str, metavar='PATH',
+                        help='path to features csv')
     parser.add_argument('--result', default='results/similar_firebase', type=str, metavar='DIR', help='path to results')
     parser.add_argument('--extract_num', default=10, type=int, help='num of extract images per one input image')
     args = parser.parse_args()

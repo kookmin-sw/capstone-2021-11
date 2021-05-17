@@ -14,3 +14,4 @@ scipy
 sklearn
 pyinstaller
 firebase_admin
+PyQt5==5.13.0
