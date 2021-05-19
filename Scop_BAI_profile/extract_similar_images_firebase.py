@@ -102,6 +102,7 @@ def read_image(img_path, input_size=224):
     # 2) Make hsv image
     hsv = img.copy().convert('HSV')
     hsv = (np.array(hsv).astype(np.float32) / 255.)
+    hsv = hsv[:, :, 1:]
 
     # 3) Convert as tensor shape
     mean = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape(1, 1, 3)

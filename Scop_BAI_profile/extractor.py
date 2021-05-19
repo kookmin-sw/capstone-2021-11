@@ -126,7 +126,7 @@ class ResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        x = self.conv1(x[:, :5, :, :])
+        x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
@@ -259,6 +259,7 @@ class ExtractorDialog(QDialog, UIDialog):
         # 3) Make hsv image
         hsv = img.copy().convert('HSV')
         hsv = (np.array(hsv).astype(np.float32) / 255.)
+        hsv = hsv[:, :, 1:]
 
         # 4) Convert as tensor shape
         mean = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape(1, 1, 3)

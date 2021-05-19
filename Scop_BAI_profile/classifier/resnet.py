@@ -122,31 +122,14 @@ class ResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        x = self.conv1(x[:, :5, :, :])
+        x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
-
-        # x_rgb = x[:, :3, :, :]
-        # x_rgb = self.conv1(x_rgb)
-        # x_rgb = self.bn1(x_rgb)
-        # x_rgb = self.relu(x_rgb)
-        # x_hs = x[:, 3:5, :, :]
-        # x_hs = self.conv1_hs(x_hs)
-        # x_hs = self.bn1_hs(x_hs)
-        # x_hs = self.relu(x_hs)
-        # x = torch.cat((x_rgb, x_hs), dim=1)
-        # x = self.maxpool(x)
-
         x = self.layer1(x)
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
-
-        # features = self.avgpool(x)
-        # x = features.reshape(features.size(0), -1)
-        # x = self.fc(x)
-
         x = self.avgpool(x)
         x = x.reshape(x.size(0), -1)
         x = self.fc1(x)

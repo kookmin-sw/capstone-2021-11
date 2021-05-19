@@ -80,6 +80,7 @@ class PicDataset(data.Dataset):
         # 3) Make hsv image
         hsv = img.copy().convert('HSV')
         hsv = (np.array(hsv).astype(np.float32) / 255.)
+        hsv = hsv[:, :, 1:]
 
         # 4) Convert as tensor shape
         mean = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape(1, 1, 3)
