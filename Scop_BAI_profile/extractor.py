@@ -8,6 +8,7 @@ import torch.optim
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog, QMessageBox, QLineEdit, QPushButton, QLabel, QListWidget
 from scipy import spatial
+from PIL import Image
 
 VERSION = '0.0.1'
 print(VERSION)
@@ -67,7 +68,7 @@ class BasicBlock(nn.Module):
 
 
 class ResNet(nn.Module):
-    def __init__(self, block=BasicBlock, layers=[2, 2, 2, 2], num_classes=21, groups=1, width_per_group=64, replace_stride_with_dilation=None, norm_layer=None):
+    def __init__(self, block=BasicBlock, layers=[2, 2, 2, 2], num_classes=12, groups=1, width_per_group=64, replace_stride_with_dilation=None, norm_layer=None):
         super(ResNet, self).__init__()
         if norm_layer is None:
             norm_layer = nn.BatchNorm2d
@@ -200,8 +201,8 @@ class ExtractorDialog(QDialog, UIDialog):
 
         self.LoadingMsgBox.show()
 
-        self.model_path = 'results/model_best.pth'
-        self.csv_path = 'results/features.csv'
+        self.model_path = 'data/model_best.pth'
+        self.csv_path = 'data/features.csv'
 
         self.model = self.load_model(self.model_path)
         self.csv_data = self.read_csv_data(self.csv_path)
@@ -245,9 +246,6 @@ class ExtractorDialog(QDialog, UIDialog):
         return img
 
     def read_image(self, img_path):
-        mean = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape(1, 1, 3)
-        std = np.array([0.229, 0.224, 0.225], dtype=np.float32).reshape(1, 1, 3)
-
         # 1) Read Image
         stream = open(img_path, "rb")
         bytes = bytearray(stream.read())
@@ -255,14 +253,28 @@ class ExtractorDialog(QDialog, UIDialog):
         img = cv2.imdecode(numpyarray, cv2.IMREAD_IGNORE_ORIENTATION | cv2.IMREAD_COLOR)
 
         # 2) Resize and Pad Image
-        input_image = self.resize_and_pad_image(img, input_size=224)
+        img = self.resize_and_pad_image(img, input_size=224)
+        img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 
-        # 3) Convert as tensor shape
-        input_image = (input_image.astype(np.float32) / 255.)
-        input_image = (input_image - mean) / std
+        # 3) Make hsv image
+        hsv = img.copy().convert('HSV')
+        hsv = (np.array(hsv).astype(np.float32) / 255.)
+
+        # 4) Convert as tensor shape
+        mean = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape(1, 1, 3)
+        std = np.array([0.229, 0.224, 0.225], dtype=np.float32).reshape(1, 1, 3)
+        mean = np.flip(mean)
+        std = np.flip(std)
+
+        img = (np.array(img).astype(np.float32) / 255.)
+        img = (img - mean) / std
+
+        # 5) Stack rgb and hsv
+        input_image = np.dstack((img, hsv))
         input_image = input_image.transpose(2, 0, 1)
+        input_image = torch.from_numpy(np.array([input_image]))
 
-        return torch.from_numpy(np.array([input_image]))
+        return input_image
 
     def open_image_as_pixmap(self, image_path):
         stream = open(image_path, "rb")
@@ -303,7 +315,6 @@ class ExtractorDialog(QDialog, UIDialog):
         with torch.no_grad():
             image = self.read_image(image_path)
             image = image.cuda(non_blocking=True) if torch.cuda.is_available() else image
-
             output, feature = self.model(image)
             feature = feature[0].cpu().data.numpy()
 
@@ -312,7 +323,7 @@ class ExtractorDialog(QDialog, UIDialog):
                 distance = spatial.distance.cosine(feature, compare_feature)
                 distances.append([compare_file_path, distance])
 
-            for line in sorted(distances, key=lambda x: x[1])[:self.extract_num]:
+            for line in sorted(distances, key=lambda x: x[1])[1:self.extract_num + 1]:
                 self.OutputListView.addItem(line[0])
 
 
