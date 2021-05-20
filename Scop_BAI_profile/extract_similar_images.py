@@ -18,7 +18,7 @@ def load_model(args):
     # load checkpoint file
     if os.path.isfile(args.model_path):
         print("=> loading checkpoint '{}'".format(args.model_path))
-        checkpoint = torch.load(args.model_path)
+        checkpoint = torch.load(args.model_path, map_location=torch.device('cpu'))
         state_dict = checkpoint['state_dict']
         model.load_state_dict(state_dict)
         print("=> loaded checkpoint '{}' (epoch {})".format(args.model_path, checkpoint['epoch']))
@@ -131,11 +131,11 @@ def extract_similar_images(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Extract Similar Images')
-    parser.add_argument('--data', default='/home/ubuntu/data/bai/test', type=str, help='path or dir to input data')
+    parser.add_argument('--data', default='data/test', type=str, help='path or dir to input data')
     parser.add_argument('--num_classes', default=12, type=int, metavar='N', help='number of classes')
-    parser.add_argument('--model_path', default='results/model_best.pth', type=str, metavar='PATH', help='path to model')
-    parser.add_argument('--csv_path', default='results/features.csv', type=str, metavar='PATH', help='path to features csv')
-    parser.add_argument('--result', default='results/similar', type=str, metavar='DIR', help='path to results')
+    parser.add_argument('--model_path', default='data/model_best.pth', type=str, metavar='PATH', help='path to model')
+    parser.add_argument('--csv_path', default='data/features.csv', type=str, metavar='PATH', help='path to features csv')
+    parser.add_argument('--result', default='data/similar', type=str, metavar='DIR', help='path to results')
     parser.add_argument('--extract_num', default=10, type=int, help='num of extract images per one input image')
     args = parser.parse_args()
 

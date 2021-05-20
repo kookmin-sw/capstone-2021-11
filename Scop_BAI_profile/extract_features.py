@@ -15,7 +15,7 @@ def load_model(args):
 
     # load checkpoint file
     if os.path.isfile(args.model_path):
-        checkpoint = torch.load(args.model_path)
+        checkpoint = torch.load(args.model_path, map_location=torch.device('cpu'))
         state_dict = checkpoint['state_dict']
         model.load_state_dict(state_dict)
         print("=> loaded checkpoint '{}' (epoch {})".format(args.model_path, checkpoint['epoch']))
