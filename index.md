@@ -45,7 +45,7 @@
 ---
 <br>
 
-# 소개 영상 Demo Video
+# 소개 영상
 <br>
 
 ## Favorfit 페이버핏
