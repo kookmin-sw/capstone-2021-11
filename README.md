@@ -6,11 +6,11 @@
 
 ## 페이버핏 
 #### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
-- 사진 작가와 사진을 찍길 원하는 고객을 연결
+- 사진 작가와 사진을 찍길 원하는 고객을 연결   
+- 이미지의 특징을 추출하고 비교해 비슷한 느낌의 사진을 찾는 인공지능 모델 개발
 - 고객은 AI 모델을 통해 본인의 취향과 맞는 사진 작가를 찾을 수 있음
     - 원하는 장르를 선택하면 사진 작가를 추천
-    - 원하는 느낌의 사진을 올리면 비슷한 느낌의 사진과 촬영할 수 있는 작가를 추천   
-- 
+    - 원하는 느낌의 사진을 올리면 비슷한 느낌의 사진과 촬영할 수 있는 작가를 추천
 
 ## 스타일티어
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
@@ -26,22 +26,21 @@
 TODO: 링크 추가 예정
 
 # 3. 팀 소개
-
-```markdown
+```
 이름    : 변근호
 학번    : 20142681
 E-mail  : bkh5922a@gmail.com
 
 페이버핏 AI 모델 개발
 ```
-```markdown
+```
 이름    : 오상기
 학번    : 20142725
 E-mail  : osk7237@gmail.com
 
 스타일티어 DB, 백앤드 기획 및 개발
 ```
-```markdown
+```
 이름    : 정민선
 학번    : 20170126
 E-mail  : jms0214@kookmin.ac.kr
@@ -51,20 +50,19 @@ E-mail  : jms0214@kookmin.ac.kr
 
 
 # 4. 사용법
-
-# 스타일티어
-
+## 스타일티어
 [![django version](https://img.shields.io/badge/django-3.1.5-black)](https://www.djangoproject.com/)
 [![drf version](https://img.shields.io/badge/DRF-3.12.2-red)](https://www.django-rest-framework.org/)
 [![mysql version](https://img.shields.io/badge/mysql-8.0.22-blue)](https://www.mysql.com/)
-
 > Scop corp.
 
 사슴무리 쇼핑몰 웹 페이지.
 
-#### Getting Started
-
-OS X & Linux & Windows :
+#####  Getting Started
+```
+cd styletier
+```
+##### OS X & Linux & Windows :
 ```sh
 pip install -r requirements.txt
 cd deer/
@@ -72,48 +70,46 @@ python manage.py migrate
 python manage.py runserver
 ```
   
-# 페이버핏 AI
+## 페이버핏 AI
+[![python version](https://img.shields.io/badge/python-3.6-black)](https://www.python.org/)
+[![pytorch version](https://img.shields.io/badge/PyTorch-1.4.0-red)](https://pytorch.org/)
+[![opencv version](https://img.shields.io/badge/opencv-4.1.1-green)](https://opencv.org/)
+[![numpy version](https://img.shields.io/badge/numpy-1.17.4-blue)](https://numpy.org/)
+#####  Getting Started
 ```
 cd Scop_BAI_profile
 ```
-#### Install
+##### Install
 ```
 sudo pip install -r requirments.txt
 ```
-
-#### 0. Dataset setting
+##### 0. Dataset setting
 ```
 python tools/rename_files.py \
 python tools/val_maker.py 
 ```
-
-#### 1-1. Train Model
+##### 1-1. Train Model
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py --data ~/data/bai --pretrained
 ```
-
-#### 1-2. Test Model
+##### 1-2. Test Model
 ```
 CUDA_VISIBLE_DEVICES=0 python test.py --data ~/data/bai --data_type all --resume results/model_best.pth \
 CUDA_VISIBLE_DEVICES=0 python test.py --data ~/data/bai --data_type all --resume results/model_best.pth --tsne --debug_correct
 ```
-
-#### 2. Extract Features
+##### 2. Extract Features
 ```
 python extract_features.py --data ~/data/bai --model_path results/model_best.pth --csv_path results/features.csv
 ```
-
-#### 3-1. Extract Similar Images
+##### 3-1. Extract Similar Images
 ```
 python extract_similar_images.py --data ~/data/bai/test --model_path results/model_best.pth --csv_path results/features.csv --result results/similar --extract_num 10
 ```
-
-#### 3-2. Run Similar Image Extractor with simple GUI
+##### 3-2. Run Similar Image Extractor with simple GUI
 ```
 python extractor.py
 ```
-
-#### 4. Make .exe file
+##### 4. Make .exe file
 ```
 pyinstaller -w -D extractor.py
 ```
