@@ -2,7 +2,9 @@
 2021년 11조  https://github.com/kookmin-sw/capstone-2021-11
 <br><br><br>
 
-# 1. 프로잭트 소개
+---
+
+# 프로잭트 소개
 
 ## 페이버핏 
 #### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
@@ -18,7 +20,9 @@
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
 <br><br><br>
 
-# 2. 소개 영상
+---
+
+# 소개 영상
 ## Favorfit 페이버핏
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
 <br><br>
@@ -48,7 +52,9 @@ TODO: 링크 추가 예정
     - E-mail  : jms0214@kookmin.ac.kr
 <br>
 
-# 4. 사용법
+---
+
+# 사용법
 ## 스타일티어
 [![django version](https://img.shields.io/badge/django-3.1.5-black)](https://www.djangoproject.com/)
 [![drf version](https://img.shields.io/badge/DRF-3.12.2-red)](https://www.django-rest-framework.org/)
@@ -115,7 +121,9 @@ pyinstaller -w -D extractor.py
 ```
 <br>
 
-# 5. 기타
+---
+
+# 기타
 
 ## Scop - Favorfit
 
