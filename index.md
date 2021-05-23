@@ -17,8 +17,8 @@
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
 <br><br><br>
-# 2. 소개 영상
 
+# 2. 소개 영상
 ## Favorfit 페이버핏
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
 <br><br>
