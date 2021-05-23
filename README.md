@@ -27,7 +27,7 @@
 <br><br>
 ## StyleTier 스타일티어 시연 영상
 TODO: 링크 추가 예정
-<br><br>
+<br><br><br>
 
 # 팀 소개
 - 변근호
