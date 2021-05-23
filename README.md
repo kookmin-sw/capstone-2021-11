@@ -1,19 +1,29 @@
 [![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=382668&assignment_repo_type=GroupAssignmentRepo)
-# 페이버핏
+# 스콥
 2021년 11조  https://kookmin-sw.github.io/capstone-2021-11/
 
 # 1. 프로잭트 소개
 
-## AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
-![Favorfit_img_2](imgs/favorfit_1.png)
-![Favorfit_img_1](imgs/favorfit_2.png)
-- 원하는 장르를 선택하면 사진 작가를 추천
-- 원하는 느낌의 사진을 올리면, 비슷한 느낌의 사진과 그런 사진을 촬영할 수 있는 작가를 추천
+## 페이버핏 
+#### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
+- 사진 작가와 사진을 찍길 원하는 고객을 연결
+- 고객은 AI 모델을 통해 본인의 취향과 맞는 사진 작가를 찾을 수 있음
+    - 원하는 장르를 선택하면 사진 작가를 추천
+    - 원하는 느낌의 사진을 올리면 비슷한 느낌의 사진과 촬영할 수 있는 작가를 추천   
+- 
+
+## 스타일티어
+####20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
+- 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
 
 # 2. 소개 영상
 
-Faorfit 페이버핏
+## Favorfit 페이버핏
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
+## Favorfit AI 테스트 프로그램 시연 영상
+[![Favorfit 페이버핏AI](https://img.youtube.com/vi/xdPP0RVKHtE/maxresdefault.jpg)](https://youtu.be/xdPP0RVKHtE)
+## StyleTier 스타일티어 시연 영상
+TODO: 링크 추가 예정
 
 # 3. 팀 소개
 
@@ -61,7 +71,7 @@ cd deer/
 python manage.py migrate
 python manage.py runserver
 ```
-
+  
 # 페이버핏 AI
 ```
 cd Scop_BAI_profile
