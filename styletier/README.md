@@ -18,7 +18,3 @@ cd deer/
 python manage.py migrate
 python manage.py runserver
 ```
-
-
-## Release History
-
