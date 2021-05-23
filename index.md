@@ -1,14 +1,14 @@
-# 스콥
+# 스콥 Scop
 2021년 11조  https://github.com/kookmin-sw/capstone-2021-11
 <br><br>
 
 ---
 <br>
 
-# 프로잭트 소개
+# 프로잭트 소개 Introduction
 <br>
 
-## 페이버핏 
+## 페이버핏 Favorfit
 #### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
 - 사진 작가와 사진을 찍길 원하는 고객을 연결   
 - 이미지의 특징을 추출하고 비교해 비슷한 느낌의 사진을 찾는 인공지능 모델 개발
@@ -17,16 +17,29 @@
     - 원하는 느낌의 사진을 올리면 비슷한 느낌의 사진과 촬영할 수 있는 작가를 추천
 <br>
 
-## 스타일티어
+#### Photo preference analysis and photographer matching system using AI algorithm
+- Connect photographers and customers who want to take pictures  
+- Developed an AI model that extracts and compares features of images to find similar photos  
+- Customers can find photographers that suit their preferences through AI models 
+     - Select the desired genre and recommend a photographer  
+     - If you upload your favorite picture, we recommend a photographer who can take a similar picture
+<br>
+
+## 스타일티어 StyleTier
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
+<br>
+
+#### Influencer experience-based video commerce platform targeting men in their 20s-30s
+- Connecting influencers who want to sell their products and consumers who want to buy influencers's products
 <br><br>
 
 ---
 <br>
 
-# 소개 영상
+# 소개 영상 Demo Video
 <br>
+
 ## Favorfit 페이버핏
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
 <br><br>
@@ -40,8 +53,9 @@ TODO: 링크 추가 예정
 ---
 <br>
 
-# 팀 소개
+# 팀 소개 About us
 <br>
+
 - 변근호
     - 페이버핏 AI 모델 개발
     - 학번    : 20142681
@@ -63,10 +77,10 @@ TODO: 링크 추가 예정
 ---
 <br>
 
-# 사용법
+# 사용법 How To Run
 <br>
 
-## 스타일티어
+## 스타일티어 StyleTier
 [![django version](https://img.shields.io/badge/django-3.1.5-black)](https://www.djangoproject.com/)
 [![drf version](https://img.shields.io/badge/DRF-3.12.2-red)](https://www.django-rest-framework.org/)
 [![mysql version](https://img.shields.io/badge/mysql-8.0.22-blue)](https://www.mysql.com/)
@@ -87,7 +101,7 @@ python manage.py runserver
 ```
 <br>
 
-## 페이버핏 AI
+## 페이버핏 Favorfit AI
 [![python version](https://img.shields.io/badge/python-3.6-black)](https://www.python.org/)
 [![pytorch version](https://img.shields.io/badge/PyTorch-1.4.0-red)](https://pytorch.org/)
 [![opencv version](https://img.shields.io/badge/opencv-4.1.1-green)](https://opencv.org/)
