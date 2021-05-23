@@ -21,7 +21,7 @@
 # Introduction
 
 ## Favorfit
-#### Photo preference analysis and photographer matching system using AI algorithm
+#### Photo preference analysis and photographer matching system using AI
 - Connect photographers and customers who want to take pictures  
 - Developed an AI model that extracts and compares features of images to find similar photos  
 - Customers can find photographers that suit their preferences through AI models 
