@@ -16,7 +16,23 @@
 ## 스타일티어
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
-<br><br><br>
+<br><br>
+
+# Introduction
+
+## Favorfit
+#### Photo preference analysis and photographer matching system using AI algorithm
+- Connect photographers and customers who want to take pictures  
+- Developed an AI model that extracts and compares features of images to find similar photos  
+- Customers can find photographers that suit their preferences through AI models 
+     - Select the desired genre and recommend a photographer  
+     - If you upload your favorite picture, we recommend a photographer who can take a similar picture
+<br>
+
+## StyleTier
+#### Influencer experience-based video commerce platform targeting men in their 20s-30s
+- Connecting influencers who want to sell their products and consumers who want to buy influencers's products
+<br><br>
 
 # 소개 영상
 ## Favorfit 페이버핏
