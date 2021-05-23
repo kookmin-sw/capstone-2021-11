@@ -17,8 +17,8 @@
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
 <br><br><br>
-# 2. 소개 영상
 
+# 2. 소개 영상
 ## Favorfit 페이버핏
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
 <br><br>
@@ -30,27 +30,22 @@ TODO: 링크 추가 예정
 <br><br>
 
 # 3. 팀 소개
-```
-이름    : 변근호
-학번    : 20142681
-E-mail  : bkh5922a@gmail.com
-
-페이버핏 AI 모델 개발
-```
-```
-이름    : 오상기
-학번    : 20142725
-E-mail  : osk7237@gmail.com
-
-스타일티어 DB, 백앤드 기획 및 개발
-```
-```
-이름    : 정민선
-학번    : 20170126
-E-mail  : jms0214@kookmin.ac.kr
-
-스타일티어 프론트앤드 개발
-```
+- 변근호
+    - 페이버핏 AI 모델 개발
+    - 학번    : 20142681
+    - E-mail  : bkh5922a@gmail.com
+<br>
+    
+- 오상기
+    - 스타일티어 DB, 백앤드 기획 및 개발
+    - 학번    : 20142725
+    - E-mail  : osk7237@gmail.com
+<br>
+    
+- 정민선
+    - 스타일티어 프론트앤드 개발
+    - 학번    : 20170126
+    - E-mail  : jms0214@kookmin.ac.kr
 <br>
 
 # 4. 사용법
@@ -118,7 +113,7 @@ python extractor.py
 ```
 pyinstaller -w -D extractor.py
 ```
-<br><br>
+<br>
 
 # 5. 기타
 

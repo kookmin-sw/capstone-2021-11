@@ -1,5 +1,5 @@
 # 스콥
-2021년 11조  https://kookmin-sw.github.io/capstone-2021-11/
+2021년 11조  https://github.com/kookmin-sw/capstone-2021-11
 <br><br><br>
 
 # 1. 프로잭트 소개
@@ -30,27 +30,22 @@ TODO: 링크 추가 예정
 <br><br>
 
 # 3. 팀 소개
-```
-이름    : 변근호
-학번    : 20142681
-E-mail  : bkh5922a@gmail.com
-
-페이버핏 AI 모델 개발
-```
-```
-이름    : 오상기
-학번    : 20142725
-E-mail  : osk7237@gmail.com
-
-스타일티어 DB, 백앤드 기획 및 개발
-```
-```
-이름    : 정민선
-학번    : 20170126
-E-mail  : jms0214@kookmin.ac.kr
-
-스타일티어 프론트앤드 개발
-```
+- 변근호
+    - 페이버핏 AI 모델 개발
+    - 학번    : 20142681
+    - E-mail  : bkh5922a@gmail.com
+<br>
+    
+- 오상기
+    - 스타일티어 DB, 백앤드 기획 및 개발
+    - 학번    : 20142725
+    - E-mail  : osk7237@gmail.com
+<br>
+    
+- 정민선
+    - 스타일티어 프론트앤드 개발
+    - 학번    : 20170126
+    - E-mail  : jms0214@kookmin.ac.kr
 <br>
 
 # 4. 사용법
@@ -118,7 +113,7 @@ python extractor.py
 ```
 pyinstaller -w -D extractor.py
 ```
-<br><br>
+<br>
 
 # 5. 기타
 
