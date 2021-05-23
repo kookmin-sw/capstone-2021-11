@@ -6,8 +6,6 @@
 <br>
 
 # 프로잭트 소개
-<br>
-
 ## 페이버핏
 #### AI알고리즘을 이용한 사진 취향 분석 및 사진작가 매칭 시스템
 - 사진 작가와 사진을 찍길 원하는 고객을 연결   
@@ -24,8 +22,6 @@
 <br>
 
 # Introduction
-<br>
-
 ## Favorfit
 #### Photo preference analysis and photographer matching system using AI algorithm
 - Connect photographers and customers who want to take pictures  
@@ -60,8 +56,6 @@ TODO: 링크 추가 예정
 <br>
 
 # 팀 소개
-<br>
-
 - 변근호
     - 페이버핏 AI 모델 개발
     - 학번    : 20142681
@@ -156,8 +150,6 @@ pyinstaller -w -D extractor.py
 <br>
 
 # 기타
-<br>
-
 ## Scop - Favorfit
 > **2019.04–2019.06**  국민대 실전창업교육 1기: 1,2차 교육 이수  
 **2019.06-2019.12**  국민대학교 창업지원단 서포터즈 4기  
