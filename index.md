@@ -3,7 +3,6 @@
 <br><br>
 
 ---
-<br>
 
 # 프로잭트 소개
 
@@ -22,7 +21,6 @@
 <br><br>
 
 ---
-<br>
 
 # 소개 영상
 ## Favorfit 페이버핏
@@ -36,7 +34,6 @@ TODO: 링크 추가 예정
 <br><br>
 
 ---
-<br>
 
 # 3. 팀 소개
 - 변근호
@@ -58,7 +55,6 @@ TODO: 링크 추가 예정
 <br><br>
 
 ---
-<br>
 
 # 사용법
 ## 스타일티어
@@ -128,7 +124,6 @@ pyinstaller -w -D extractor.py
 <br><br>
 
 ---
-<br>
 
 # 기타
 ## Scop - Favorfit
