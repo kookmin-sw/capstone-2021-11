@@ -1,5 +1,6 @@
 # 스콥
 2021년 11조  https://kookmin-sw.github.io/capstone-2021-11/
+<br><br><br>
 
 # 1. 프로잭트 소개
 
@@ -10,19 +11,23 @@
 - 고객은 AI 모델을 통해 본인의 취향과 맞는 사진 작가를 찾을 수 있음
     - 원하는 장르를 선택하면 사진 작가를 추천
     - 원하는 느낌의 사진을 올리면 비슷한 느낌의 사진과 촬영할 수 있는 작가를 추천
+<br>
 
 ## 스타일티어
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
-
+<br><br><br>
 # 2. 소개 영상
 
 ## Favorfit 페이버핏
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
+<br><br>
 ## Favorfit AI 테스트 프로그램 시연 영상
 [![Favorfit 페이버핏AI](https://img.youtube.com/vi/xdPP0RVKHtE/maxresdefault.jpg)](https://youtu.be/xdPP0RVKHtE)
+<br><br>
 ## StyleTier 스타일티어 시연 영상
 TODO: 링크 추가 예정
+<br><br>
 
 # 3. 팀 소개
 ```
@@ -46,7 +51,7 @@ E-mail  : jms0214@kookmin.ac.kr
 
 스타일티어 프론트앤드 개발
 ```
-
+<br>
 
 # 4. 사용법
 ## 스타일티어
@@ -68,7 +73,8 @@ cd deer/
 python manage.py migrate
 python manage.py runserver
 ```
-  
+<br>
+
 ## 페이버핏 AI
 [![python version](https://img.shields.io/badge/python-3.6-black)](https://www.python.org/)
 [![pytorch version](https://img.shields.io/badge/PyTorch-1.4.0-red)](https://pytorch.org/)
@@ -112,7 +118,7 @@ python extractor.py
 ```
 pyinstaller -w -D extractor.py
 ```
-
+<br><br>
 
 # 5. 기타
 
