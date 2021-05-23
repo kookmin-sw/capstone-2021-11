@@ -42,8 +42,8 @@
 [![Favorfit 페이버핏AI](https://img.youtube.com/vi/xdPP0RVKHtE/maxresdefault.jpg)](https://youtu.be/xdPP0RVKHtE)
 <br><br>
 ## StyleTier 스타일티어 시연 영상
-TODO: 링크 추가 예정
-<br><br><br>
+[![StyleTier 스타일티어](https://img.youtube.com/vi/XT1gmIea4xo/maxresdefault.jpg)](https://www.youtube.com/watch?v=XT1gmIea4xo)
+<br><br>
 
 # 팀 소개
 - 변근호

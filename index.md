@@ -46,10 +46,10 @@
 [![Favorfit 페이버핏](https://img.youtube.com/vi/jv924Uk81JQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jv924Uk81JQ)
 <br><br>
 ## Favorfit AI 테스트 프로그램 시연 영상
-[![Favorfit 페이버핏AI](https://img.youtube.com/vi/xdPP0RVKHtE/maxresdefault.jpg)](https://youtu.be/xdPP0RVKHtE)
+[![Favorfit_AI 페이버핏AI](https://img.youtube.com/vi/xdPP0RVKHtE/maxresdefault.jpg)](https://youtu.be/xdPP0RVKHtE)
 <br><br>
 ## StyleTier 스타일티어 시연 영상
-TODO: 링크 추가 예정
+[![StyleTier 스타일티어](https://img.youtube.com/vi/XT1gmIea4xo/maxresdefault.jpg)](https://www.youtube.com/watch?v=XT1gmIea4xo)
 <br><br>
 
 ---
