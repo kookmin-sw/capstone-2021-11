@@ -1,5 +1,6 @@
 # 스콥
 국민대학교 캡스톤 2021년 11조  [https://kookmin-sw.github.io/capstone-2021-11/](https://kookmin-sw.github.io/capstone-2021-11/)
+중간발표 자료 [https://drive.google.com/file/d/1UM3NPIlZrbyeWd0Lld0xIh1N70jwlcPi/view?usp=sharing](https://drive.google.com/file/d/1UM3NPIlZrbyeWd0Lld0xIh1N70jwlcPi/view?usp=sharing)
 
 - [프로잭트 소개](#프로잭트-소개)
 - [소개 영상](#소개-영상)
