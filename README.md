@@ -46,6 +46,10 @@
 ## StyleTier
 #### Influencer experience-based video commerce platform targeting men in their 20s-30s
 - Connecting influencers who want to sell their products and consumers who want to buy influencers's products
+- Influencers promote their products through contents (videos, etc.) produced by influencers, and connect them with style tiers so that consumers purchase them
+- Influencers don't have to sell products through YouTube or Instagram, platforms that are not suitable for sale
+- Natural publicity effect through the popularity of influencers
+- Influencers and consumers trade products through professional platforms
 <br><br>
 
 # 소개 영상
