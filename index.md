@@ -26,8 +26,11 @@
 ## 스타일티어
 #### 20~30대 남성을 타겟으로 한 인플루언서 경험 기반 비디오 커머스 플랫폼
 - 본인의 제품을 팔고 싶은 인플루언서와 인플루언서의 제품을 사고 싶은 소비자를 연결
-<br>
-<br>
+- 인플루언서가 제작한 컨텐츠(동영상 등)을 통해 본인의 상품을 홍보하고, 이를 스타일티어와 연결하여 소비자가 구매하도록 함
+- 인플루언서는 판매에 적합하지 않은 플랫폼인 유튜브나 인스타그램을 통해 제품을 팔지 않아도 됨
+- 인플루언서의 유명세를 통한 자연스러운 홍보 효과
+- 인플루언서와 소비자는 전문적인 플랫폼을 통해 상품 거래
+<br><br>
 
 # Introduction
 ## Favorfit
@@ -42,6 +45,10 @@
 ## StyleTier
 #### Influencer experience-based video commerce platform targeting men in their 20s-30s
 - Connecting influencers who want to sell their products and consumers who want to buy influencers's products
+- Influencers promote their products through contents (videos, etc.) produced by influencers, and connect them with style tiers so that consumers purchase them
+- Influencers don't have to sell products through YouTube or Instagram, platforms that are not suitable for sale
+- Natural publicity effect through the popularity of influencers
+- Influencers and consumers trade products through professional platforms
 <br><br>
 
 ---
